@@ -1,0 +1,44 @@
+Title: Phase II Clinical Trial of Treatment X in Patients with Condition Y
+
+Study Design:
+This was a multicenter, randomized, double-blind, placebo-controlled Phase II clinical trial
+evaluating the safety and efficacy of Treatment X in adult patients diagnosed with Condition Y.
+A total of 120 participants were enrolled and randomized 1:1 to receive either Treatment X or placebo
+for 12 weeks.
+
+Inclusion Criteria:
+- Adults aged 18–75 years with a confirmed diagnosis of Condition Y.
+- Stable background therapy for at least 8 weeks prior to screening.
+
+Exclusion Criteria:
+- History of severe hypersensitivity reactions to components of Treatment X.
+- Significant hepatic or renal impairment (AST/ALT > 3x ULN, eGFR < 40 mL/min/1.73 m²).
+
+Primary Endpoint:
+The primary endpoint was the change from baseline to Week 12 in Symptom Severity Score (SSS),
+measured using a validated 0–100 scale, where higher scores indicate more severe symptoms.
+
+Secondary Endpoints:
+- Proportion of patients achieving at least a 30% reduction in SSS at Week 12.
+- Change from baseline to Week 12 in quality-of-life score (QOL-12 questionnaire).
+- Incidence of treatment-emergent adverse events (TEAEs).
+
+Efficacy Results:
+Patients receiving Treatment X showed a statistically significant reduction in SSS compared with placebo.
+The mean change from baseline to Week 12 in the Treatment X group was -24.3 (SD 10.5) versus -11.2 (SD 9.8)
+in the placebo group (p < 0.001).
+
+Safety and Tolerability:
+Treatment X was generally well tolerated. The most commonly reported side effects of Treatment X were:
+- Mild headache (18% of patients)
+- Nausea (12% of patients)
+- Transient dizziness (9% of patients)
+
+Serious adverse events were rare and occurred in 2 patients (3%) in the Treatment X group and 3 patients (5%)
+in the placebo group. None of the serious adverse events were assessed as related to Treatment X by the
+investigators.
+
+Conclusions:
+Treatment X demonstrated clinically meaningful improvements in symptom severity and was generally well tolerated
+in adults with Condition Y over a 12-week treatment period.
+
