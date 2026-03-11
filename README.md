@@ -30,6 +30,18 @@ backend/
   utils/
     chunking.py         # Chunking utilities
     loader.py           # Document loaders (PDF/TXT)
+frontend/
+  package.json      # Vite + React app
+  index.html
+  vite.config.ts
+  tsconfig.json
+  src/
+    main.tsx        # Frontend entrypoint
+    App.tsx         # Layout shell
+    config.ts       # Backend API base URL
+    styles.css      # Modern chat UI styling
+    components/
+      Chat.tsx      # Chat interface + sources panel
 data/
   documents/        # Put your input documents here
   faiss_index/      # Saved FAISS index (created by ingestion)
@@ -71,7 +83,7 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-#### 3. Install dependencies
+#### 3. Install backend dependencies
 
 ```bash
 pip install --upgrade pip
@@ -212,23 +224,45 @@ curl -X POST "http://localhost:8000/api/chat" ^
 
 ---
 
-### Frontend Integration (Vercel)
+### Frontend (React + Vite)
 
-Your Vercel frontend can call the API like:
+A minimal, modern-styled chat UI is included under `frontend/`.
 
-```ts
-const response = await fetch("https://<your-backend-domain>/api/chat", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ question }),
-});
+#### 1. Install frontend dependencies
 
-const data = await response.json();
-// data.answer -> string
-// data.sources -> array of { label, text, metadata }
+```bash
+cd frontend
+npm install
 ```
 
-For local development, use `http://localhost:8000/api/chat`.
+#### 2. Configure backend URL (optional)
+
+By default, the frontend calls `http://localhost:8000`:
+
+- See `frontend/src/config.ts`.
+- To override for different environments (e.g., Vercel deployment), set:
+
+```bash
+VITE_API_BASE_URL=https://your-backend-domain
+```
+
+in a `frontend/.env` file or in your Vercel project environment settings.
+
+#### 3. Run frontend locally
+
+In one terminal, run the backend as above. In another:
+
+```bash
+cd frontend
+npm run dev
+```
+
+Open the URL printed in the console (typically `http://localhost:5173`).
+
+You will see:
+
+- A chat panel where you can ask questions about your ingested clinical documents.
+- A sources panel that shows the chunks used for the most recent answer.
 
 ---
 

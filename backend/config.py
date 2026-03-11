@@ -1,7 +1,7 @@
-import os
 from functools import lru_cache
 
-from pydantic import BaseSettings, Field
+from pydantic import Field
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
@@ -14,6 +14,8 @@ class Settings(BaseSettings):
     top_k: int = Field(5, env="TOP_K")
 
     class Config:
+        # Avoid conflict with Pydantic's internal `model_` attribute namespace
+        protected_namespaces = ("settings_",)
         env_file = ".env"
         env_file_encoding = "utf-8"
 
